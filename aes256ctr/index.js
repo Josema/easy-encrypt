@@ -4,6 +4,9 @@ const crypto = require('crypto')
 const algorithm = 'aes-256-ctr'
 
 function encrypt(text, password) {
+    const type = typeof text
+    if (text !== null && type === 'object') text = JSON.stringify(text)
+    if (type !== 'string') text = String(text)
     const cipher = crypto.createCipher(algorithm, password)
     let crypted = cipher.update(text, 'utf8', 'hex')
     crypted += cipher.final('hex')

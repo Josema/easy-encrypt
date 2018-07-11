@@ -1,13 +1,15 @@
 {
-  "name": "easy-encrypt",
-  "version": "1.0.0",
-  "description": "Easy encryption on top of the native crypto library",
-  "main": "src/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "MIT",
-  "devDependencies": {
-  }
+    "name": "easy-encrypt",
+    "version": "1.0.1",
+    "description": "Easy encryption on top of the native crypto library",
+    "main": "src/index.js",
+    "scripts": {
+        "test": "ava",
+        "testing": "npm test -- --watch"
+    },
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "ava": "^0.25.0"
+    }
 }
