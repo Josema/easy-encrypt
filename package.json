@@ -1,5 +1,5 @@
 {
-  "name": "easyencryption",
+  "name": "easy-encrypt",
   "version": "1.0.0",
   "description": "Easy encryption on top of the native crypto library",
   "main": "src/index.js",
