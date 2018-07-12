@@ -3,19 +3,19 @@
 const crypto = require('crypto')
 const algorithm = 'aes-256-ctr'
 
-function encrypt(text, password) {
-    const type = typeof text
-    if (text !== null && type === 'object') text = JSON.stringify(text)
-    if (type !== 'string') text = String(text)
+function encrypt(data, password) {
+    // const type = typeof data
+    // if (data !== null && type === 'object') data = JSON.stringify(data)
+    // if (type !== 'string') data = String(data)
     const cipher = crypto.createCipher(algorithm, password)
-    let crypted = cipher.update(text, 'utf8', 'hex')
+    let crypted = cipher.update(data, 'utf8', 'hex')
     crypted += cipher.final('hex')
     return crypted
 }
 
-function decrypt(text, password) {
+function decrypt(data, password) {
     const decipher = crypto.createDecipher(algorithm, password)
-    let dec = decipher.update(text, 'hex', 'utf8')
+    let dec = decipher.update(data, 'hex', 'utf8')
     dec += decipher.final('utf8')
     return dec
 }

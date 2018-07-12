@@ -19,17 +19,17 @@ test('Invalid password', async t => {
     t.not(decrypt(encrypt(text, PASSWORD), 'PASSWORD'), text)
 })
 
-test('Number', async t => {
-    const value = 1234
-    t.is(decrypt(encrypt(value, PASSWORD), PASSWORD), String(value))
-})
+// test('Number', async t => {
+//     const value = 1234
+//     t.is(decrypt(encrypt(value, PASSWORD), PASSWORD), String(value))
+// })
 
-test('Boolean', async t => {
-    const value = true
-    t.is(decrypt(encrypt(value, PASSWORD), PASSWORD), String(value))
-})
+// test('Boolean', async t => {
+//     const value = true
+//     t.is(decrypt(encrypt(value, PASSWORD), PASSWORD), String(value))
+// })
 
-test('Object', async t => {
-    const value = { hello: 'world' }
-    t.is(decrypt(encrypt(value, PASSWORD), PASSWORD), JSON.stringify(value))
-})
+// test('Object', async t => {
+//     const value = { hello: 'world' }
+//     t.is(decrypt(encrypt(value, PASSWORD), PASSWORD), JSON.stringify(value))
+// })
